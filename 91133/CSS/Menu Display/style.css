@@ -1,0 +1,56 @@
+/* Zera as conf da pág*/
+*{
+    margin: 0; /*Zera a margem*/
+    padding: 0; /*Zera espaço*/
+    box-sizing: border-box; /*Zera bordas*/
+}
+
+
+header{
+    background-color: rgb(170, 230, 230);
+    margin: 50px;
+    padding: 30px;
+}
+ul li{
+    list-style: none;
+    display: inline;
+    padding: 8px;
+}
+a{
+    /*tira o sublinhado*/
+    text-decoration: none;
+    color: rgb(20, 20, 101);
+    font-size: bold;
+    font-size: 18pt;
+    cursor: pointer;
+}
+a:hover{
+    color: rgba(93, 10, 10, 0.704);
+    text-decoration: overline;
+    padding: 12px;
+    transition: 700ms;
+}
+section{
+    margin: 50px;
+}
+
+h2{
+    background-color: rgb(170, 230, 230);
+}
+/*    
+.about{
+    background-color: rgb(170, 230, 230); 
+}
+*/
+#font-type{
+    font-family: sans-serif;
+}
+
+p{
+    padding: 10px;
+    text-align: justify;
+}
+
+footer{
+    margin: 30px;
+}
