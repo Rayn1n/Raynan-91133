@@ -21,6 +21,7 @@ html, body {
     padding: 10px 0;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 1000; 
+    border-bottom: 5px solid #d8a808;
 }
 
 h1 {
@@ -98,7 +99,7 @@ p {
 
 h3 {
     text-align: center;
-    color: #f7a306;
+    color:  #d8a808;
     font-size: 30px;
 }
 
@@ -140,4 +141,36 @@ footer {
     padding: 20px;
     text-align: center;
     margin-top: auto;
+    border-top: 3px solid black;
+}
+
+.container4 {
+    background-color: white;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
+    padding: 20px;
+    min-height: 700px; 
+    margin-top: 120px; 
+}
+
+
+.mid2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+h7{
+    font-family: sans-serif;
+    color: #e68900;
+    font-size: 50px;
+}
+
+ul{
+    font-size: 25px;
+    font-family: sans-serif;
 }
