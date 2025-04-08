@@ -1,0 +1,62 @@
+h1{
+    height: 20px;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: rgb(214, 240, 245);
+}
+
+
+.container{
+    border: 2px solid black;
+    gap: 10px;
+    width: 250px;
+    height: 250px;
+    display: inline-block;
+   background-color: azure;
+    align-items: center;
+    
+}
+
+form{
+    flex-direction: column;
+    padding: 10px;
+    margin-top: 20px;
+}
+label{
+        padding-left: 1px;
+        padding-right: 1px;
+        padding-top: 5px;
+        box-sizing: border-box;
+        display: flex;
+        width: 230px;
+        height: 30px;
+        vertical-align: top;
+}
+input{
+    width: 220px;
+    
+}
+    
+
+.bt-submit{
+    margin-top: 60px;
+}
+
+
+.container2{
+    border: 2px solid black;
+    gap: 10px;
+    width: 250px;
+    height: 350px;
+    display: inline-block;
+   background-color: azure;
+    align-items: center;
+    
+}
