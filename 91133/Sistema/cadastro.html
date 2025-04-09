@@ -10,25 +10,27 @@
     <h1>Sistema CadProd - 1.0</h1>
     <div class="container2">
         <form id="cadastro">
-
-            <label for="">Produto</label>
+            <label for="produto">Produto</label>
             <input type="text" name="produto" id="produto">
 
-
-            <label for="">Preço</label>
+            <label for="preco">Preço</label>
             <input type="text" name="preco" id="preco">
 
-            <label for="">Quantidade</label>
+            <label for="quantidade">Quantidade</label>
             <input type="text" name="quantidade" id="quantidade">
 
-            <label for="">Total</label>
+            <label for="total">Total</label>
             <input type="text" name="total" id="total">
 
             <div class="bt-submit">
                 <input type="submit" value="ENTRAR">
-                </div>
-            </form>
             </div>
-            <script src="script2.js"></script>
+            <div class="sair">
+                <!-- Atribuindo type="button" evita comportamento de submit -->
+                <button type="button" id="logoutBtn">Sair</button>
+            </div>
+        </form>
+    </div>
+    <script src="script2.js"></script>
 </body>
 </html>

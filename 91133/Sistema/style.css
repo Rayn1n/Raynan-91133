@@ -46,7 +46,8 @@ input{
     
 
 .bt-submit{
-    margin-top: 60px;
+    margin-top: 50px;
+    
 }
 
 
@@ -59,4 +60,7 @@ input{
    background-color: azure;
     align-items: center;
     
+}
+.sair{
+    margin-top: 22px;
 }

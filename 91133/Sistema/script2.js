@@ -6,6 +6,7 @@ document.getElementById("cadastro").addEventListener("submit", function(event) {
     const quantidade = parseInt(document.getElementById("quantidade").value);
     const totalInput = document.getElementById("total");
 
+   
     if (!produto || !(preco) || !(quantidade)) {
         alert("Por favor, preencha todos os campos corretamente.");
         return;
@@ -16,6 +17,13 @@ document.getElementById("cadastro").addEventListener("submit", function(event) {
         return;
     }
 
+    
     const total = preco * quantidade;
-    totalInput.value = total.toFixed(2).replace('.', ','); 
+    totalInput.value = total.toFixed(2).replace('.', ',');
+});
+
+
+document.getElementById("logoutBtn").addEventListener("click", function() {
+    localStorage.removeItem("username");
+    window.location.href = "index.html";
 });
