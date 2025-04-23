@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de estoque</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Controle de estoque</h1>
+    
+    <form method="post" action="api/api.php" onsubmit="return validarFormulario()">
+        <label for="produto"> Produto:</label>
+        <input type="text" id="produto" name="produto">
+
+        <label for="tipo">Tipo:</label>
+        <select name="tipo" id="tipo">
+            <option value="">Selecione</option>
+            <option value="Alimento">Alimento</option>
+            <option value="Limpeza">Limpeza</option>
+            <option value="Eletrônico">Eletrônico</option>
+            <option value="Vestuário">Vestuário</option>
+        </select>
+        
+        <label for="quantidade">Quantidade</label>
+        <input type="number" id="quantidade" name="quantidade" min="1">
+
+        <button type="submit">Cadastrar</button>
+    </form>
+    <div>
+        <button class="btn"><a href="http://localhost/app/view/listar.php"></a>Listar produtos</button>
+        <br> <button class="btn"><a href="http://localhost/app/"></a>Voltar</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
