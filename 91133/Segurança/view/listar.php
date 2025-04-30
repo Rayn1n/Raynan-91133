@@ -2,7 +2,7 @@
 include 'conecta.php';
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -18,9 +18,9 @@ include 'conecta.php';
 
   <?php
   $sql = "SELECT * FROM produtos ORDER BY id DESC";
-  $resultado = $conn->query($sql);
+  $resultado = $conn->query($sql); 
 
-  if ($resultado->num_rows > 0): ?>
+  if ($resultado->num_rows > 0): ?> 
     <table>
       <thead>
         <tr>
