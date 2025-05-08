@@ -1,0 +1,81 @@
+/* 1) Zera margens e centraliza colunas */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+main {
+  max-width: 1200px;
+  margin: 0 auto;           
+  padding: 2rem;           
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;                
+}
+
+main section {
+  text-align: center;
+}
+
+main .equipe img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+.parc h2 {
+  margin-top: 0;    
+  margin-bottom: 1rem
+}
+
+.parc ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid #e5e7eb; 
+}
+.parc li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+.parc li img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 1rem;
+}
+.parc li .info {
+  flex: 1;
+  text-align: left;
+}
+
+.equipe img {
+  display: block;
+  margin: 0 auto;  
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
+
+main > section h2 {
+  display: inline-block;
+  background: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px gray;
+}
+
+footer {
+  background-color: rgb(34, 42, 56);
+  padding: 20px;
+  text-align: center;
+  margin-top: 652px;
+  border-top: 3px solid rgb(124, 147, 185);
+  color: white;
+}
