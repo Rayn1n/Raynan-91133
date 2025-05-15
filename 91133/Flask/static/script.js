@@ -22,6 +22,19 @@ function excluirAmigo(id) {
     .then(() => carregarLista());
 }
 
+function editarAmigo(id, nomeAtual) {
+    const novoNome = prompt('Edite o nome do amigo:', nomeAtual);
+    if (novoNome === null || novoNome.trim() === '') return;
+
+    fetch(`/api/editar/${id}`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ nome: novoNome })
+    })
+    .then(res => res.json())
+    .then(() => carregarLista());
+}
+
 function carregarLista() {
     fetch('/api/listar')
     .then(res => res.json())
@@ -31,10 +44,21 @@ function carregarLista() {
         amigos.forEach(amigo => {
             const item = document.createElement('li');
             item.textContent = amigo.nome + ' ';
-            const btn = document.createElement('button');
-            btn.textContent = 'Excluir';
-            btn.onclick = () => excluirAmigo(amigo.id);
-            item.appendChild(btn);
+
+
+            const btnEditar = document.createElement('button');
+            btnEditar.innerHTML = 'Editar';
+            btnEditar.title = 'Editar';
+            btnEditar.style.marginRight = '8px';
+            btnEditar.onclick = () => editarAmigo(amigo.id, amigo.nome);
+            item.appendChild(btnEditar);
+
+            const btnExcluir = document.createElement('button');
+            btnExcluir.innerHTML = 'Excluir';
+            btnExcluir.title = 'Excluir';
+            btnExcluir.onclick = () => excluirAmigo(amigo.id);
+            item.appendChild(btnExcluir);
+
             lista.appendChild(item);
         });
     });

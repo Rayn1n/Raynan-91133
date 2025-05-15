@@ -51,5 +51,20 @@ def excluir(id):
     conn.close()
     return jsonify({'mensagem': 'Amigo excluído com sucesso!'})
 
+@app.route('/api/editar/<int:id>', methods=['PUT'])
+def editar(id):
+    dados = request.json
+    novo_nome = dados.get('nome')
+    if not novo_nome:
+        return jsonify({'mensagem': 'Nome não pode ser vazio.'}), 400
+
+    conn = sqlite3.connect('amigos.db')
+    cursor = conn.cursor()
+    cursor.execute('UPDATE amigos SET nome = ? WHERE id = ?', (novo_nome, id))
+    conn.commit()
+    conn.close()
+    return jsonify({'mensagem': 'Amigo editado com sucesso!'})
+
+
 if __name__ == '__main__':
     app.run(debug=True)
